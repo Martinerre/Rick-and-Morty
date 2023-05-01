@@ -1,0 +1,10 @@
+.formatDiv {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    width:fit-content;
+    align-items: center;
+    margin: 8px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
