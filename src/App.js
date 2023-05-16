@@ -14,9 +14,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 
 function App() {
-
   const [characters, setCharacters] = useState([]);
-
   function onSearch(character) {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())

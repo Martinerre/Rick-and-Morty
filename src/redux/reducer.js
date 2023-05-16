@@ -1,7 +1,8 @@
-import { ADD_FAV, DELETE_FAV } from "./types"
+import { ADD_FAV, DELETE_FAV, FILTER } from "./types"
 
 const initialState = {
-    myFavorites: []
+    myFavorites: [],
+    allCaracters: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -10,13 +11,18 @@ const rootReducer = (state = initialState, action) => {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites: [...state.myFavorites, action.payload]
+                allCaracters: [...state.allCaracters, action.payload], myFavorites: [...state.allCaracters, action.payload]
             }
         case DELETE_FAV:
             return {
                 ...state,
                 myFavorites: state.myFavorites.filter(elemento => elemento.id !== action.payload) //si es igual no lo incluye en la lista
             }
+        case FILTER:
+            return {
+                
+            }
+
         default:
             return { ...state }
     }

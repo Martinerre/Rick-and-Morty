@@ -2,4 +2,4 @@ para server:
 server -s build
 
 Responsive:
-MDN: Imagenes adaptables
+MDN: Imagenes adaptables    
